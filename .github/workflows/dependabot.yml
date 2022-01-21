@@ -1,5 +1,7 @@
 name: Dependabot
 on:
+  repository_dispatch:
+  
   push:
     branches:
       - main
@@ -19,3 +21,4 @@ jobs:
           bundler_version: 2.3.5
           dependabot_version: 0.171.2
           token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: mxschmitt/action-tmate@v3
